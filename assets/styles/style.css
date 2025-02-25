@@ -2,7 +2,7 @@
 :root {
   --purple: #4f0091;
   --orange: #ff8639;
-  --bg-color: light-dark(var(--orange), var(--purple));
+  --bg-color: #000000;
   --text-color: light-dark(var(--purple), var(--orange));
   --border-width: 2px;
   --border-color: var(--text-color);
@@ -19,6 +19,8 @@
     brightness(73%) contrast(126%); /* For purple */
   --svg-hover-color: invert(66%) sepia(21%) saturate(2202%) hue-rotate(339deg)
     brightness(101%) contrast(101%);
+  --grid-color: rgba(255, 255, 255, 0.05);
+  --grid-size: 30px;
 }
 
 @media screen and (max-width: 500px) {
@@ -199,6 +201,9 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--bg-color);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
 }
 
 .header-main {
