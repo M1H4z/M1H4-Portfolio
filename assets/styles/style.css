@@ -302,6 +302,7 @@ body {
 /* home-page css starts here */
 body.home {
   display: grid;
+  overflow: hidden;
 }
 
 body.home nav {
