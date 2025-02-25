@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-user-color-scheme="dark">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+   <title>M1H4</title>
+   <link rel="icon" type="image/x-icon" href="./assets/icons/logo.png">
+   <link rel="stylesheet" href="./assets/styles/style.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="home">
+   <div id="loading-screen">
+      <span class="loading-text" id="loading-text"></span>
+      <div class="progress-bar">
+         <div class="progress"></div>
+      </div>
+      <div id="loading-items">Starting...</div>
+   </div>
+   <header class="header-main home">
+      <nav class="nav-main home">
+         <div>
+            <a class="about" href="./public/about.html">
+               <h1>M</h1>
+            </a>
+         </div>
+         <div>
+            <a class="work" href="./public/work.html">
+               <h1>1</h1>
+            </a>
+         </div>
+         <div>
+            <a class="social" href="./public/social.html">
+               <h1>H</h1>
+            </a>
+         </div>
+         <div>
+            <a class="contact" href="./public/contact.html">
+               <h1>4</h1>
+            </a>
+         </div>
+      </nav>
+      <div class="tagline">
+         <h2>web developer <span class="cursor">>_</span></h2>
+      </div>
+      <div class="terminal scrollable" role="application" aria-label="Command terminal" tabindex="0">
+         <p>Welcome to M1H4-Linux 1.0 LTS</p>
+         <p>Click on the letter or type "help" to get started</p>
+         <div id="output"></div>
+         <div class="input-line">
+            <span>USER:~$ </span>
+            <div class="input-container">
+               <input type="text" id="userInput" aria-label="Command input" autocomplete="off" autofocus class="cmd-input">
+               <span class="blinking-cursor"></span>
+            </div>
+         </div>
+      </div>
+      <nav class="home-contact">
+         <div class="div1"></div>
+         <div class="div2"></div>
+         <div class="div3"></div>
+         <div class="div4"></div>
+      </nav>
+   </header>
+   <script src="./assets/scripts/loading.js"></script>
+   <script src="./assets/scripts/command.js"></script>
+</body>
+
+</html>
