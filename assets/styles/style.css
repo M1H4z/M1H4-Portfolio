@@ -953,16 +953,16 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
   }
 
   .name {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: -0.5px;
   }
 
   .title {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .position {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .location-icon img {
@@ -1235,7 +1235,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 }
 
 .tech-info-title {
-  font-size: 0.7rem;
+  font-size: 0.55rem;
   color: var(--text-color);
   opacity: 0.8;
   margin-bottom: 0.5rem;
@@ -1245,7 +1245,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 }
 
 .tech-name {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: var(--text-color);
   opacity: 0;
@@ -1257,7 +1257,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 }
 
 .tech-experience {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-color);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1311,51 +1311,68 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
   }
 
   .tech-name {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .tech-experience {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .tech-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2px 1fr;
+    padding: 1rem 0.5rem;
+    gap: 0.5rem;
   }
 
-  .tech-divider {
-    display: none;
+  .tech-info {
+    min-height: 60px;
+    padding: 0.2rem;
+    width: 100%;
+    max-width: 120px; /* Reduced from 150px */
+    margin: 0 auto;
+  }
+
+  .tech-info-title {
+    font-size: 0.35rem; /* Reduced from 0.5rem */
+    letter-spacing: 0;
+    margin-bottom: 0.3rem;
+    padding: 0;
+  }
+
+  .tech-name {
+    font-size: 0.45rem; /* Match title size */
+    letter-spacing: 0;
+  }
+
+  .tech-experience {
+    font-size: 0.37rem;
+    letter-spacing: 0;
   }
 
   .tech-list {
-    grid-template-columns: repeat(3, minmax(20px, 1fr));
+    width: 100%;
+    max-width: 120px; /* Match info width */
+    margin: 0 auto;
     gap: 0.5rem;
   }
 
   .tech-item {
-    width: 25px;
-    height: 25px;
-  }
-
-  .tech-name {
-    font-size: 0.7rem;
-  }
-
-  .tech-experience {
-    font-size: 0.6rem;
+    width: 22px; /* Slightly smaller icons */
+    height: 22px;
   }
 }
 
 /* Update responsive styles */
 @media screen and (max-width: 768px) {
   .tech-info-title {
-    font-size: 0.65rem;
+    font-size: 0.47rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .tech-info-title {
-    font-size: 0.6rem;
+    font-size: 0.37rem;
   }
 }
