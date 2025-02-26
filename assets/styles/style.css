@@ -1221,7 +1221,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 2px 1fr;
-  padding: 1.5rem;
+  padding: .5rem;
   border: 2px solid var(--text-color);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
@@ -1253,7 +1253,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 }
 
 .tech-info-title {
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   color: var(--text-color);
   opacity: 0.8;
   margin-bottom: 0.5rem;
@@ -1275,7 +1275,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 }
 
 .tech-experience {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--text-color);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1385,7 +1385,7 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 /* Update responsive styles */
 @media screen and (max-width: 768px) {
   .tech-info-title {
-    font-size: 0.47rem;
+    font-size: 0.42rem;
   }
 }
 
