@@ -336,13 +336,6 @@ body.home {
   display: grid;
   overflow: hidden;
   margin: 0;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .header-main.home {
@@ -350,17 +343,12 @@ body.home {
   padding: 2rem 9.5vw;
   border-radius: 0.7rem;
   align-content: center;
-  height: 100%;
-  max-height: 100vh;
-  overflow: hidden;
 }
 
 .nav-main.home {
   display: flex;
   gap: 3%;
   justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .nav-main.home h1 {
@@ -1404,46 +1392,5 @@ body:not(.home)::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 480px) {
   .tech-info-title {
     font-size: 0.37rem;
-  }
-}
-
-/* iPad & Tablet Specific Styles */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  body.home {
-    height: 100vh;
-    padding: 1rem;
-  }
-
-  .header-main.home {
-    padding: 1rem;
-    width: calc(100% - 2rem);
-    margin: 0 auto;
-  }
-
-  .nav-main.home {
-    gap: 2%;
-  }
-
-  .nav-main.home h1 {
-    font-size: clamp(2rem, 15vw, 8rem);
-  }
-
-  .tagline {
-    font-size: clamp(0.6rem, 3vw, 2rem);
-  }
-}
-
-/* iPhone & iPad in landscape */
-@media only screen and (orientation: landscape) and (max-device-width: 1024px) {
-  body.home {
-    height: 100vh;
-  }
-
-  .header-main.home {
-    padding: 1rem;
-  }
-
-  .nav-main.home h1 {
-    font-size: clamp(2rem, 12vw, 6rem);
   }
 }
