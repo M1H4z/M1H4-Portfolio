@@ -336,13 +336,6 @@ body.home {
   display: grid;
   overflow: hidden;
   margin: 0;
-  -webkit-text-size-adjust: 100%;
-}
-
-body.home nav {
-  display: flex;
-  gap: 3%;
-  justify-content: center;
 }
 
 .header-main.home {
@@ -352,16 +345,10 @@ body.home nav {
   align-content: center;
 }
 
-.header-main.home .tagline {
-  position: relative;
+.nav-main.home {
   display: flex;
+  gap: 3%;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
-  height: 100%;
-  font-size: clamp(0.6rem, 4vw, 2.5rem);
 }
 
 .nav-main.home h1 {
@@ -375,24 +362,28 @@ body.home nav {
   transition: transform 200ms ease-in-out;
 }
 
-.nav-main:not(.home) a {
-  font-size: clamp(20px, 10vw, 50px);
-  font-weight: 400;
-  color: var(--text-color);
-}
-
-.nav-main.home a::after {
+.nav-main a::after {
   content: "";
   position: absolute;
-  top: -2rem; /* Moves the text above the element */
+  top: -2rem;
   left: 44%;
   transform: translateX(-50%);
   font-size: clamp(0.5rem, 2vw, 1rem);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   color: var(--text-color);
-  white-space: nowrap; /* Prevents text from wrapping */
-  pointer-events: none; /* Prevents it from interfering with hover */
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Show text on hover */
+.nav-main a:hover::after {
+  opacity: 1;
+}
+
+.nav-main a:hover h1 {
+  transform: scale(1.3);
+  transition: transform 200ms ease-in-out;
 }
 
 /* Define content for each specific link */
@@ -413,13 +404,49 @@ body.home nav {
   content: "contact";
 }
 
-/* Show text on hover */
-.nav-main a:hover::after {
-  opacity: 1;
+.tagline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(0.6rem, 4vw, 2.5rem);
 }
 
-.nav-main a:hover h1 {
-  transform: scale(1.3);
+@media screen and (max-width: 500px) {
+  body.home {
+    padding: 1rem;
+  }
+
+  .header-main.home {
+    padding: 1rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body.home {
+    height: -webkit-fill-available;
+  }
+}
+
+.nav-main:not(.home) a {
+  font-size: clamp(20px, 10vw, 50px);
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-main:not(.home) a:hover {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+}
+
+.nav-main:not(.home) a:hover h1 {
+  transform: scale(1.1);
   transition: transform 200ms ease-in-out;
 }
 
